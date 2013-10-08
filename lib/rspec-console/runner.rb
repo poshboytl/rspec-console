@@ -15,6 +15,8 @@ class RSpecConsole::Runner
         config.output_stream = STDOUT
         config.color_enabled = true
       end
+      require "factory_girl"
+      ::FactoryGirl.find_definitions
 
       require "./spec/spec_helper"
     end
